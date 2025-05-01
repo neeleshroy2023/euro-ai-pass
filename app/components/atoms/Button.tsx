@@ -30,7 +30,16 @@
  */
 
 "use client";
+import { JSX } from "react";
 import { twMerge } from "tailwind-merge";
+
+type ButtonProps = {
+  label: string;
+  state: string;
+  onClick: () => void;
+  disabled: boolean;
+  icon: JSX.Element | null;
+};
 
 const Button = ({
   label,
@@ -38,13 +47,7 @@ const Button = ({
   onClick,
   disabled = false,
   icon,
-}: {
-  label: string;
-  state: "idle" | "pending" | "success" | "error";
-  onClick: () => void;
-  disabled?: boolean;
-  icon?: React.ReactNode;
-}) => {
+}: ButtonProps) => {
   const buttonClass = twMerge(
     "flex items-center justify-center px-6 py-2 text-white font-semibold rounded-md transition duration-300 ease-in-out cursor-pointer",
     "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",

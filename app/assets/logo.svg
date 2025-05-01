@@ -1,0 +1,18 @@
+<svg width="200" height="250" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Resume Background -->
+  <rect x="25" y="10" width="150" height="180" rx="20" fill="#0A1F38"/>
+
+  <!-- Profile Icon -->
+  <circle cx="65" cy="50" r="12" fill="white"/>
+
+  <!-- Resume Lines -->
+  <rect x="90" y="45" width="60" height="8" rx="4" fill="white"/>
+  <rect x="45" y="75" width="110" height="8" rx="4" fill="white"/>
+  <rect x="45" y="95" width="70" height="6" rx="3" fill="white"/>
+
+  <!-- Sparkle Icon -->
+  <path d="M145 50c0 5-4 9-9 9s-9-4-9-9 4-9 9-9 9 4 9 9z" fill="white"/>
+
+  <!-- "AI" Text -->
+  <text x="100" y="150" text-anchor="middle" fill="white" font-size="28" font-family="Arial, sans-serif" font-weight="bold">AI</text>
+</svg>

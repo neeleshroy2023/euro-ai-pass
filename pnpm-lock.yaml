@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lottiefiles/dotlottie-react':
+        specifier: ^0.13.4
+        version: 0.13.4(react@19.1.0)
       next:
         specifier: 15.3.1
         version: 15.3.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -320,6 +323,14 @@ packages:
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
     cpu: [x64]
     os: [win32]
+
+  '@lottiefiles/dotlottie-react@0.13.4':
+    resolution: {integrity: sha512-QW3hSF1k95B56nswzs5iLY7FFGbwv/DkNDK3Kv1PyaoInAmj0+BE0496YTkWqRaYM2p0jKskjrZrLsHJVvfatg==}
+    peerDependencies:
+      react: ^17 || ^18 || ^19
+
+  '@lottiefiles/dotlottie-web@0.43.0':
+    resolution: {integrity: sha512-mIfb2aZj1xFY/NTtZ4tQPiOVz8MfWDkdUOCVpzCv3q8C8WRKxZUwPgIG8BdqhkujPksS9eYDXH/4f9qxyfNCwg==}
 
   '@napi-rs/wasm-runtime@0.2.9':
     resolution: {integrity: sha512-OKRBiajrrxB9ATokgEQoG87Z25c67pCpYcCwmXYX8PBftC9pBfN18gnm/fh1wurSLEKIAt+QRFLFCQISrb66Jg==}
@@ -2612,6 +2623,13 @@ snapshots:
 
   '@img/sharp-win32-x64@0.34.1':
     optional: true
+
+  '@lottiefiles/dotlottie-react@0.13.4(react@19.1.0)':
+    dependencies:
+      '@lottiefiles/dotlottie-web': 0.43.0
+      react: 19.1.0
+
+  '@lottiefiles/dotlottie-web@0.43.0': {}
 
   '@napi-rs/wasm-runtime@0.2.9':
     dependencies:
