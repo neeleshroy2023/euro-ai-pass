@@ -4,26 +4,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
-  --background: #ffffff;
-  --foreground: #000000;
-  --color-blue-50: #eff9ff;
-  --color-blue-100: #dff2ff;
-  --color-blue-200: #b8e6ff;
-  --color-blue-300: #79d3ff;
-  --color-blue-400: #31bdff;
-  --color-blue-500: #06a5f1;
-  --color-blue-600: #0083ce;
-  --color-blue-700: #0069a7;
-  --color-blue-800: #035889;
-  --color-blue-900: #094d77;
-  --color-blue-950: #062e4b;
+@import "preline/variants.css";
+@source "../node_modules/preline/dist/*.js";
+
+@plugin "@tailwindcss/forms";
+
+@layer base {
+  :root {
+    --color-sand-light: #ffe7c8;
+    --color-sand-dark: #f9c88f; /* Slightly darker than sand */
+    --color-text-default: #1f2937;
+    --color-sand-accent: #ff914d;
+    --color-sand-accent-dark: #e67e22; /* Darker accent color */
+    --color-sand-border: #fcd9b0; /* Slightly darker than sand */
+  }
+
+  body {
+    @apply bg-[var(--color-sand-light)] text-[var(--color-text-default)];
+    font-family: var(--font-text), Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--color-text-default);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-text);
+@theme {
+  --color-primary: var(--color-sand-light);
+  --color-secondary: var(--color-sand-dark);
+  --color-accent: var(--color-sand-accent);
+  --color-accent-dark: var(--color-sand-accent-dark);
+  --color-border: var(--color-border);
+  --color-text-default: var(--color-text-default);
+  --color-text-secondary: var(--color-sand-dark);
+  --color-text-accent: var(--color-sand-accent);
+  --color-text-inverse: #ffffff;
 }
 
 h1,
@@ -35,4 +53,15 @@ h6,
 b,
 strong {
   font-family: var(--font-display);
+}
+
+/* Optional: Custom Utility Classes */
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white font-semibold py-2 px-4 rounded hover:opacity-90;
+  }
+
+  .card {
+    @apply bg-white shadow-md rounded-lg p-4 border border-[var(--color-border)];
+  }
 }

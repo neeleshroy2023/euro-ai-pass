@@ -11,18 +11,26 @@
     "commit": "cz"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
     "next": "15.3.1",
+    "preline": "^3.0.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "vanilla-calendar-pro": "^3.0.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/jquery": "^3.5.32",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "commitizen": "^4.3.1",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
