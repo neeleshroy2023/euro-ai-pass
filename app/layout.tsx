@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Red_Hat_Display, Red_Hat_Text } from "next/font/google";
 import "./globals.css";
+import PrelineScriptWrapper from "@/components/PrelineScriptWrapper";
+import Navigation from "@/components/navigation";
 
 const redhatDisplay = Red_Hat_Display({
   variable: "--font-display",
@@ -27,8 +29,10 @@ export default function RootLayout({
       <body
         className={`${redhatDisplay.variable} ${redHatText.variable} antialiased`}
       >
-        {children}
+        <Navigation />
+        <div className="container mx-auto px-4">{children}</div>
       </body>
+      <PrelineScriptWrapper />
     </html>
   );
 }
